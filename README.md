@@ -31,9 +31,9 @@ Pass `--plots` to also show graphs.
 
 For CNNs, eager static PTQ and QAT in PyTorch are CPU quantization flows, which is why the script measures quantized CNN latency on CPU for a fair comparison. PyTorch’s official static quantization tutorial explicitly notes that quantization is currently supported for CPUs in that flow. citeturn468215search1turn468215search10
 
-For `resnet18` and `mobilenetv2`, the script uses TorchVision’s **quantization-native model builders** for static PTQ and QAT because these architectures have residual / inverted-residual add paths that need quantizable implementations. TorchVision provides dedicated quantizable builders for both models. citeturn468215search5turn468215search11turn468215search14turn468215search2
+For `resnet18` and `mobilenetv2`, the script uses TorchVision’s **quantization-native model builders** for static PTQ and QAT because these architectures have residual / inverted-residual add paths that need quantizable implementations. TorchVision provides dedicated quantizable builders for both models.
 
-For LLMs, the script uses Hugging Face `BitsAndBytesConfig`, which is the official loading path for 8-bit and 4-bit quantization in Transformers. citeturn468215search0turn468215search12turn468215search15
+For LLMs, the script uses Hugging Face `BitsAndBytesConfig`, which is the official loading path for 8-bit and 4-bit quantization in Transformers.
 
 ## Installation
 
