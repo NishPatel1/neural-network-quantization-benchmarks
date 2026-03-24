@@ -29,7 +29,7 @@ Pass `--plots` to also show graphs.
 
 ## Why the code is structured this way
 
-For CNNs, eager static PTQ and QAT in PyTorch are CPU quantization flows, which is why the script measures quantized CNN latency on CPU for a fair comparison. PyTorch’s official static quantization tutorial explicitly notes that quantization is currently supported for CPUs in that flow. citeturn468215search1turn468215search10
+For CNNs, eager static PTQ and QAT in PyTorch are CPU quantization flows, which is why the script measures quantized CNN latency on CPU for a fair comparison. PyTorch’s official static quantization tutorial explicitly notes that quantization is currently supported for CPUs in that flow.
 
 For `resnet18` and `mobilenetv2`, the script uses TorchVision’s **quantization-native model builders** for static PTQ and QAT because these architectures have residual / inverted-residual add paths that need quantizable implementations. TorchVision provides dedicated quantizable builders for both models.
 
